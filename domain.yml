@@ -1,0 +1,320 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - thank
+  
+  - enroll
+  - full_name
+  - email
+  - gender
+  - course_intake_value
+
+  - about_ucm
+  - campus_details
+  - warrensburg_campus
+  - leesummit_campus
+  - official_website
+  - campus_map
+  - warrens_map
+  - leesummit_map
+  - vision_mission
+  - current_student_enrollment_deadline
+  - official_transcripts
+  - different_courses
+  - undergraduate_courses
+  - graduate_courses
+  - bachlorsci_programs
+  - act_sci_stat_option
+  - agriscience_management
+  - agri_sci_agron
+  - bsba_programs
+  - economics
+  - cis_analytics_sd
+  - big_data_ba
+  - accountancy
+  - mse_programs
+  - curri_instrustion
+  - elementary_maths
+  - ms_programs
+  - computer_science
+  - cyber_sec_ia
+
+entities:
+  - full_name
+  - email
+  - gender
+  - course_intake_value
+
+slots:
+  full_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: full_name
+
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: email
+
+  gender:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: gender
+  
+  course_intake_value:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: course_intake_value
+
+forms:
+  enrollment_form:
+    required_slots:
+      - full_name
+      - email
+      - gender
+      - course_intake_value
+
+actions:
+  - action_default_fallback
+  - action_make_enrollment
+
+responses:
+
+  utter_ask_full_name:
+  - text: What is your Full Name ?
+
+  utter_ask_email:
+  - text: What is your email address ?
+
+  utter_ask_gender:
+  - text: What is your gender ?
+
+  utter_ask_course_intake_value:
+  - text: Which intake you are looking for ?
+    # buttons:
+    # - title: Spring
+    #   payload: '/course_intake{"course_intake_value" : "Spring"}'
+    # - title: Summer
+    #   payload: '/course_intake{"course_intake_value" : "Summer"}'
+    # - title: Fall
+    #   payload: '/course_intake{"course_intake_value" : "Fall"}'
+  
+
+  utter_different_courses:
+  - text: "Which program you looking for ?"
+    buttons:
+      - title: "Undergraduate"
+        payload: "undergraduate_courses"
+      - title: "Graduate"
+        payload: "graduate_courses"
+  
+  utter_graduate_courses:
+  - text: "Which program you looking for ?"
+    buttons:
+      - title: "MS"
+        payload: "ms_programs"
+      - title: "MSE"
+        payload: "mse_programs"
+
+  utter_ms_programs:
+  - text: "Which course you looking for ?"
+    buttons:
+      - title: "Cybersecurity and Information Assurance"
+        payload: "cyber_sec_ia"
+      - title: "Computer Science"
+        payload: "computer_science"
+
+  utter_mse_programs:
+  - text: "Which course you looking for ?"
+    buttons:
+      - title: "Curriculum & Instruction"
+        payload: "curri_instrustion"
+      - title: "Elementary Mathematics Specialist"
+        payload: "elementary_maths"
+
+  utter_undergraduate_courses:
+  - text: "Which group you looking for ?"
+    buttons:
+      - title: "BS"
+        payload: "bachlorsci_programs"
+      - title: "BSBA"
+        payload: "bsba_programs"
+
+  utter_bachlorsci_programs:
+  - text: "BS programs we offer"
+    buttons:
+      - title: "Actuarial Science & Statistics: Actuarial Science Option"
+        payload: "act_sci_stat_option"
+      - title: "Agricultural Science: Agribusiness Management"
+        payload: "agriscience_management"
+      - title: "Agricultural Science: Agronomy"
+        payload: "agri_sci_agron"
+
+  utter_curri_instrustion:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/masters-degrees/curriculum-and-instruction-mse/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/masters-degrees/curriculum-and-instruction-mse/index.php</a>"
+
+  utter_elementary_maths:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/masters-degrees/elementary-mathematics-specialist-mse-51-980/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/masters-degrees/elementary-mathematics-specialist-mse-51-980/index.php</a>"
+
+  utter_computer_science:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/masters-degrees/computer-science-masters/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/masters-degrees/computer-science-masters/index.php</a>"
+
+  utter_cyber_sec_ia:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/masters-degrees/master-of-science-cybersecurity-and-information-assurance/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/masters-degrees/master-of-science-cybersecurity-and-information-assurance/index.php</a>"
+
+
+  utter_act_sci_stat_option:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/majors/actuarial-science-and-statistics-option-1-actuarial-science-bs/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/majors/actuarial-science-and-statistics-option-1-actuarial-science-bs/index.php</a>"
+
+  utter_agriscience_management:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/majors/agribusiness-degree/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/majors/agribusiness-degree/index.php</a>"
+
+  utter_agri_sci_agron:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/majors/agronomy-degree/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/majors/agronomy-degree/index.php</a>"
+
+  utter_bsba_programs:
+  - text: "BSBA programs we affer"
+    buttons:
+      - title: "Big Data & Business Analytics"
+        payload: "big_data_ba"
+      - title: "Accountancy"
+        payload: "accountancy"
+      - title: "CIS & Analytics: Software Development"
+        payload: "cis_analytics_sd"
+      - title: "Economics"
+        payload: "economics"
+
+  utter_big_data_ba:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/majors/big-data-and-business-analytics-bsba-46-640/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/majors/big-data-and-business-analytics-bsba-46-640/index.php</a>"
+
+  utter_accountancy:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/majors/accounting-degree/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/majors/accounting-degree/index.php</a>"
+
+  utter_cis_analytics_sd:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/majors/cis-software-developer-degree/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/majors/cis-software-developer-degree/index.php</a>"
+
+  utter_economics:
+  - text: "Please go throgh the link to know about course <a href='https://www.ucmo.edu/academics/programs/majors/economics-bsba/index.php', target='_blank'>https://www.ucmo.edu/academics/programs/majors/economics-bsba/index.php</a>"
+
+
+  utter_official_transcripts:
+  - text: |
+            To order an official transcript using National Student Clearinghouse, you will be creating an account that will allow:
+  
+            Online Ordering - Request Secure Documents quickly and easily
+            Secure Payment - Pay for your order online using a secure credit card checkout
+            Order History - View the history of your requests that have been made through National Student Clearinghouse
+            <a href="https://tsorder.studentclearinghouse.org/school/ficecode/00245400" target='_blank'>National Student Clearinghouse</a>
+
+  utter_current_student_enrollment_deadline:
+  - text: "To learn about enrollent deadlines, please follow the <a href='https://www.ucmo.edu/current-students/office-of-the-registrar-and-student-records/dates-and-deadlines/enrollment-deadlines/' target='_blank'>link</a>"
+
+  utter_vision_mission:
+  - text: |
+        <b>Mission:</b><br>
+        The University of Central Missouri (UCM) disseminates knowledge that transforms students into leaders who possess the aptitudes, skills and confidence to succeed.
+        <br><b>Vision:</b><br>
+        Every student achieves that to which they aspire and leaves exceptionally equipped, enriched and connected to UCM.
+        <br><a href='https://www.ucmo.edu/about/university-mission-and-vision/' target='_blank'>Learn More</a>
+
+
+  utter_suggetions:
+  - text: "You can ask me"
+    custom:
+        payload: "quickReplies"
+        data:
+        - title: "Tell me about UCM"
+          payload: "about_ucm"
+        - title: "Campus locations"
+          payload: "campus_details"
+        - title: "Vision"
+          payload: "vision_mission" 
+        - title: "Programs you offer ?"
+          payload: "utter_different_courses"
+
+
+  utter_campus_map:
+  - text: "Which campus you looking for ?"
+    buttons:
+      - title: "Warrensburg"
+        payload: "warrens_map"
+      - title: "Lee Summit"
+        payload: "leesummit_map"
+  
+  utter_warrens_map:
+  - text: |
+            <a href='https://www.ucmo.edu/about/locations/ucm-warrensburg-campus/warrensburg-campus-map/' target='_blank'>https://www.ucmo.edu/about/locations/ucm-warrensburg-campus/warrensburg-campus-map/</a>
+
+  utter_leesummit_map:
+  - text: |
+            <a href='https://www.ucmo.edu/about/locations/ucm-lees-summit-campus/campus-map/' target='_blank'>https://www.ucmo.edu/about/locations/ucm-lees-summit-campus/campus-map/</a>
+
+  utter_greet:
+  - text: "Hey! How can i help you today?"
+  - text: "what can i assist you?"
+  - text: "Hello! What are you looking for?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by UCM."
+  - text: "I am a Mule, I can assist you with your UCM queries."
+  - text: "I am a Mule with intelligence to answer your questions."
+
+  utter_about_ucm:
+  - text: "The University of Central Missouri is an innovative school that offers a high-quality education while remaining one of the most affordable universities in the country. <a href='https://www.ucmo.edu/about/' target='_blank'>Lean More</a>"
+
+  utter_campus_details:
+  - text: "The University of Central Missouri has two campus locations."
+    buttons:
+      - title: "Warrensburg"
+        payload: "warrensburg_campus"
+      - title: "Lee's Summit"
+        payload: "leesummit_campus"
+
+  utter_warrensburg_campus:
+  - text: "116 W South St, Warrensburg, MO 64093 Tel: (660) 543-4111"
+    image: "https://marvel-b1-cdn.bc0a.com/f00000000155119/www.ucmo.edu/images/hero-images/campus/campus23-hero.jpg"
+
+  utter_leesummit_campus:
+  - text: "1101 NW Innovation Parkway, Lee's Summit, MO 64086 Tel: (816) 347-1612"
+    image: "https://marvel-b1-cdn.bc0a.com/f00000000155119/www.ucmo.edu/images/hero-images/mic/mic06-hero.jpg"
+
+  utter_official_website:
+  - text: |
+          <a href='https://www.ucmo.edu/' target='_blank'>https://www.ucmo.edu/</a>
+
+  utter_out_of_scope/non_english:
+  - text: I only understand English, I'm sorry.
+
+  utter_out_of_scope/other:
+  - text: I can't help you with that, I'm sorry.
+
+  utter_default:
+  - text: I'm sorry, I didn't quite get you? Please try again..
+  
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

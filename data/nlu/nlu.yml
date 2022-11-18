@@ -1,0 +1,568 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - How do you do?
+    - Pleased to meet you
+    - Nice to meet you
+    - How have you been ?
+    - Yo!
+    - What's up?
+    - Sup
+    - Heyyy
+    - Howdy!
+    - Hi mule
+    - Mule
+    - what is up
+    - hey mule
+    - hello mule
+    - hello it was me again
+    - hey dude
+    - hello ucm
+    - Hi UCM
+    - Hi folk
+    - helloooooo
+    - wassup
+    - yoo
+    - hey man
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - adios
+    - adios?
+    - bye bye bot
+    - bye for now
+    - bye udo
+    - bye was nice talking to you
+    - bye!
+    - byee
+    - catch you later
+    - ciao
+    - cya
+    - farewell
+    - take care
+    - then bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Nice
+    - OK
+    - Ofcourse
+    - Ok let's start
+    - Ok.
+    - Okay
+    - Okay!
+    - PLEASE
+    - SURE
+    - Sure
+    - Sweet
+    - That would be great
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
+    - Yes.
+    - Yup
+    - a little
+    - absolutely
+    - accept
+    - accepted
+    - agreed
+
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - absolutely not
+    - decline
+    - definitely not
+    - NO DON"T WANT THIS!
+    - nah
+    - never mind
+    - no i can't
+    - no i don't accept
+    - no i dont want to
+    - no i dont want to accept :P lol
+    - no i won't
+    - no ma'am
+    - no sir
+    - no sorry
+    - no thank s
+    - no thank you
+    - no thanks
+
+- intent: thank
+  examples: |
+    - Cool. Thanks
+    - Great, thanks
+    - Thank you
+    - Thank you Sara
+    - Thank you so much
+    - Thank's!
+    - Thanks
+    - Thanks bot
+    - Thanks for that
+    - Thanks!
+    - amazing, thanks
+    - cheers
+    - cheers bro
+    - cool thank you
+    - cool thanks
+    - cool, thanks
+    - danke
+    - great thanks
+    - ok thanks
+    - ok thanks sara
+    - ok thanks!
+    - perfect thank you
+    - thank u
+    - thank you
+    - thank you anyways
+    - thanks
+    - thanks a bunch for everything
+    - thanks a lot
+    - thanks for forum link, I'll check it out
+    - thanks for the help
+    - thanks this is great news
+    - thanks you
+    - thanks!
+    - thankyou
+    - thnks
+    - thx
+    - yes thanks
+    - thanks for your information
+    - thanks f
+
+- intent: enroll
+  examples: |
+    - i wanted to enroll in to the course
+    - how to enroll in the course
+    - enroll me in 
+    - enroll me in to the course
+    - register me in the ms
+    - enroll
+    - enrollment
+    - enrolling
+    - can you enroll me into the course
+    - i would like to register into the course
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - Ar you a bot ?
+    - Are you a bot
+    - Are you a chat bot?
+    - Are you the bot?
+    - Hi there, are you the bot?
+    - are you a BOT
+    - are you a Skynet ?
+    - are you a mule
+    - are you a bot ?
+    - are you a bot?
+    - are you a chatbot
+    - are you a rasa bot?
+    - are you a real bot?
+    - are you a mule
+    - are you ai
+    - are you artificial
+    - are you artificial intelligence
+    - are you bot
+    - are you bot?
+    - are you rasa bot?
+    - are you real
+    - are you real lol
+    - are you really a bot
+    - are you robot
+    - are you sure that you're a bot?
+    - bot?
+    - mule?
+    - cuz you are a bot
+    - i guess you are a chatbot
+    - oh are you chatbot?
+    - tell me, are you a bot?
+    - what are you, a bot?
+    - you are a robot
+    - you are ai
+    - you are chatbot
+    - you're a bot
+    - you robo
+    - real bot then?
+    - are you really a bbot?
+
+- intent: about_ucm
+  examples: |
+    - what is ucm
+    - UCM?
+    - tell me about ucm
+    - why ucm
+    - why should i join ucm
+    - how ucm will help me
+    - i wanted to know some information about ucm
+    - just wanna learn about college
+    - looking to know about university of central missouri
+    - what is this school about
+
+- intent: campus_details
+  examples: |
+    - how many campuses
+    - tell me about the campus
+    - campuses
+    - where is ucm located?
+    - what are different locations of ucm
+    - Does ucm located in any other location
+    - ucm campuses
+    - university of central missouri locations
+
+- intent: warrensburg_campus
+  examples: |
+    - Warrensburg campus
+    - Where is warrensburg located?
+    - what is the location in warrensburg
+    - how to reach to warrens campus
+
+- intent: leesummit_campus
+  examples: |
+    - Lee's Summit campus
+    - Where is Lee's Summit located?
+    - what is the location in Leesummit
+    - how to reach to summit campus
+
+- intent: official_website
+  examples: |
+    - what is the official website of University of Central Missouri
+    - Official website of UCM
+    - ucm website
+    - tell me the web url for ucm
+    - do you know your official website
+
+- intent: campus_map
+  examples: |
+    - campus map
+    - can i see ucm campus map
+    - ucm campus map
+    - i want to see the map of ucm
+    - where is the campus map
+
+- intent: warrens_map
+  examples: |
+    - campus map of warrensburg
+    - warrens campus map
+    - show me the map of warrens burg campus
+    - i wanna see warrensburg campus map
+
+- intent: leesummit_map
+  examples: |
+    - campus map of leesummit
+    - leesummit campus map
+    - can i see the map of leesummit campus
+    - show me leesummit map
+
+- intent: vision_mission
+  examples: |
+    - what is vision
+    - tell me you mission
+    - what is the mission and vision of ucm
+    - ucm vision
+    - ucm mission
+    - how ucm follow its vision for student success
+    - what are your values
+
+- intent: current_student_enrollment_deadline
+  examples: |
+    - what are enrollment deadlines
+    - emrollment deadlines
+    - what is the deadline for enrollment
+    - last date for enrollment
+    - how much time i have for enrollment
+    - does enrollent still open
+    - current student enrollment
+    - what is the deadline for current student enrollment
+
+- intent: official_transcripts
+  examples: |
+    - how to order official transcripts
+    - can i order for official transcripts
+    - official transcripts
+    - how to get official transcripts
+    - i am looking for official transcripts
+    - i want my official transcripts
+    - different ways for transcripts
+    - what are different means can i get my official transcripts
+
+- intent: different_courses
+  examples: |
+    - what are the different courses ucm offers
+    - what courses does ucm providing
+    - in which courses can i enroll in ucm
+    - available courses
+    - what different academic program do you offer
+    - academic courses do you provide
+    - what courses are avalible in university of central missouri
+
+- synonym: undergraduate
+  examples: |
+    - undergraduates
+    - ugs
+    - ugc
+    - ug
+    - udergraduate programs
+    - undergraduate studies
+    - undergraduate student courses
+    - undergraduate degree
+
+- synonym: graduate
+  examples: |
+    - graduate
+    - graduates
+    - graduate programs
+    - graduate student courses
+    - graduate studies
+    - graduate degree
+    - graduate courses
+
+
+- intent: undergraduate_courses
+  examples: |
+    - what are the couses available for [undergraduates](degree_category)
+    - [udergraduate programs](degree_category)
+    - which courses are offered by ucm for [undergraduate](degree_category)
+    - [undergraduate studies](degree_category)
+    - courses for [undergraduate students](degree_category)
+    - [undergraduate student courses](degree_category)
+    - [undergraduate students](degree_category)
+    - tell me what programs/courses do you have for [undergraduates](degree_category)
+
+- intent: graduate_courses
+  examples: |
+    - what are the couses available for [graduates](degree_category)
+    - [graduate programs](degree_category)
+    - which courses are offered by ucm for [graduate](degree_category)
+    - [graduate studies](degree_category)
+    - courses for [graduate students](degree_category)
+    - [graduate student courses](degree_category)
+    - [graduate students](degree_category)
+    - tell me what programs/courses do you have for [graduates](degree_category)
+
+- intent: ms_programs
+  examples: |
+    - programs in ms
+    - MS programs
+    - what are the courses in MS
+    - which programs do you have for MS
+    - MS student programs
+    - what programs do you offer in masters
+    - available options for MS students
+    - master programs
+
+- intent: bachlorsci_programs
+  examples: |
+    - programs in bs
+    - BS programs
+    - what are the courses in BS
+    - which programs do you have for BS
+    - BS student programs
+    - what programs do you offer in BS
+    - available options for BS students
+
+- intent: act_sci_stat_option
+  examples: |
+    - i wanted to do Actuarial Science & Statistics Actuarial Science Option
+    - Actuarial Science Statistics Actuarial Science Option
+    - tell me about Actuarial Science Option
+    - Actuarial Science Option
+    - what are the subjects in Actuarial Science Option
+    - what will i study in Actuarial Science Option degree
+
+- intent: agriscience_management
+  examples: |
+    - i wanted to do Agricultural Science Agribusiness Management
+    - Agricultural Science Agribusiness Management
+    - tell me about Agricultural Science Agribusiness Management
+    - Agribusiness Management
+    - what are the subjects in Agribusiness Management
+    - what will i study in Agribusiness Management
+
+- intent: agri_sci_agron
+  examples: |
+    - i wanted to do Agricultural Science Agronomy
+    - Agricultural Science: Agronomy
+    - tell me about Agricultural Science Agronomy
+    - Agronomy
+    - what are the subjects in Agronomy
+    - what will i study in Agronomy
+
+- intent: bsba_programs
+  examples: |
+    - programs in bsba
+    - BSBA programs
+    - what are the courses in BSBA
+    - which programs do you have for BSBA
+    - BSBA student programs
+    - what programs do you offer in BSBA
+    - available options for BSBA students
+
+- intent: accountancy
+  examples: |
+    - i wanted to do Accountancy
+    - accountancy
+    - tell me about Accountancy
+    - Accountancy
+    - what are the subjects in Accountancy
+    - what will i study in Accountancy
+
+- intent: big_data_ba
+  examples: |
+    - i wanted to do Big Data & Business Analytics
+    - Big Data & Business Analytics
+    - tell me about Big Data & Business Analytics
+    - Big Data Analytics
+    - what are the subjects in Big Data & Business Analytics
+    - what will i study in Big Data & Business Analytics
+
+- intent: cis_analytics_sd
+  examples: |
+    - i wanted to do CIS & Analytics Software Development
+    - CIS & Analytics Software Development
+    - tell me about CIS & Analytics Software Development
+    - CIS & Analytics
+    - what are the subjects in CIS & Analytics Software Development
+    - what will i study in CIS & Analytics Software Development
+
+- intent: economics
+  examples: |
+    - i wanted to do Economics
+    - Economics
+    - tell me about Economics
+    - economics
+    - what are the subjects in Economics
+    - what will i study in Economics
+
+- intent: cyber_sec_ia
+  examples: |
+    - i wanted to do Cybersecurity and Information Assurance
+    - Cybersecurity and Information Assurance
+    - tell me about Cybersecurity and Information Assurance
+    - Cybersecurity and Information Assurance course
+    - what are the subjects in Cybersecurity and Information Assurance
+    - what will i study in Cybersecurity and Information Assurance degree
+
+- intent: computer_science
+  examples: |
+    - i wanted to do Computer Science
+    - Computer Science
+    - tell me about Computer Science
+    - Computer Science course
+    - what are the subjects in Computer Science
+    - what will i study in Computer Science degree
+
+- intent: mse_programs
+  examples: |
+    - programs in mse
+    - MSE programs
+    - what are the courses in MSE
+    - which programs do you have for MSE
+    - MSE student programs
+    - what programs do you offer in MSE under guaduate studies
+    - available options for MSE graduate students
+
+- intent: elementary_maths
+  examples: |
+    - i wanted to do Elementary Mathematics Specialist
+    - elementary mathematics specialist
+    - tell me about Elementary Mathematics Specialist
+    - Elementary Mathematics Specialist course
+    - what are the subjects in Elementary Mathematics Specialist
+    - what will i study in Elementary Mathematics Specialist degree
+
+- intent: curri_instrustion
+  examples: |
+    - programs in Curriculum & Instruction
+    - Curriculum & Instruction programs
+    - what are the courses in Curriculum & Instruction
+    - which programs do you have for Curriculum & Instruction
+    - Curriculum & Instruction student programs
+    - what programs do you offer in Curriculum & Instruction under guaduate studies
+    - available options for Curriculum & Instruction graduate students
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - can you order pizza for me
+    - I want to book a flight ticket
+    - I need a taxi
+    - How many old are you?

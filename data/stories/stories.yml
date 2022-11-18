@@ -1,0 +1,352 @@
+version: "3.1"
+
+stories:
+
+- story: enroll path
+  steps:
+  - intent: enroll
+  - action: enrollment_form
+  - action: action_make_enrollment
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+- story: hi path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_suggetions
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: thanks
+#   steps:
+#   - intent: thank
+#   - action: utter_noworries
+#   - action: utter_anything_else
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+# - story: ask feedback
+#   steps:
+#   - intent: feedback
+#   - action: action_tag_feedback
+
+- story: about ucm path
+  steps:
+  - intent: about_ucm
+  - action: utter_about_ucm
+
+- story: campus details path
+  steps:
+  - intent: campus_details
+  - action: utter_campus_details
+
+- story: warrens campus path
+  steps:
+  - intent: warrensburg_campus
+  - action: utter_warrensburg_campus
+
+- story: leesummit campus path
+  steps:
+  - intent: leesummit_campus
+  - action: utter_leesummit_campus
+
+- story: official website path
+  steps:
+  - intent: official_website
+  - action: utter_official_website
+
+- story: campus map path
+  steps:
+  - intent: campus_map
+  - action: utter_campus_map
+
+- story: warrens map path
+  steps:
+  - intent: warrens_map
+  - action: utter_warrens_map
+
+- story: leesummit path
+  steps:
+  - intent: leesummit_map
+  - action: utter_leesummit_map
+
+- story: vision mission path
+  steps:
+  - intent: vision_mission
+  - action: utter_vision_mission
+
+- story: enrollment deadline path
+  steps:
+  - intent: current_student_enrollment_deadline
+  - action: utter_current_student_enrollment_deadline
+
+- story: official transcripts path
+  steps:
+  - intent: official_transcripts
+  - action: utter_official_transcripts
+
+- story: different courses path
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+
+- story: undergraduate path1
+  steps:
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+
+- story: undergraduate path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+
+- story: graduate path1
+  steps:
+  - intent: graduate_courses
+  - action: utter_graduate_courses
+
+- story: graduate path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: graduate_courses
+  - action: utter_graduate_courses
+
+
+- story: bachlor of science path1
+  steps:
+  - intent: bachlorsci_programs
+  - action: utter_bachlorsci_programs
+  
+
+- story: bachlor of science path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bachlorsci_programs
+  - action: utter_bachlorsci_programs
+
+- story: Actuarial Science & Statistics Actuarial Science Option path1
+  steps:
+  - intent: act_sci_stat_option
+  - action: utter_act_sci_stat_option
+
+- story: Actuarial Science & Statistics Actuarial Science Option path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bachlorsci_programs
+  - action: utter_bachlorsci_programs
+  - intent: act_sci_stat_option
+  - action: utter_act_sci_stat_option
+
+- story: Agricultural Science Agribusiness Management path1
+  steps:
+  - intent: agriscience_management
+  - action: utter_agriscience_management
+
+- story: Agricultural Science Agribusiness Management path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bachlorsci_programs
+  - action: utter_bachlorsci_programs
+  - intent: agriscience_management
+  - action: utter_agriscience_management
+
+- story: Agricultural Science Agronomy path1
+  steps:
+    - intent: agri_sci_agron
+    - action: utter_agri_sci_agron
+
+- story: Agricultural Science Agronomy path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bachlorsci_programs
+  - action: utter_bachlorsci_programs
+  - intent: agri_sci_agron
+  - action: utter_agri_sci_agron
+
+- story: bachlor of science ba programs path1
+  steps:
+    - intent: bsba_programs
+    - action: utter_bsba_programs
+
+- story: bachlor of science ba programs path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bsba_programs
+  - action: utter_bsba_programs
+
+
+- story: accountancy path1
+  steps:
+  - intent: accountancy
+  - action: utter_accountancy
+
+- story: accountancy path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bsba_programs
+  - action: utter_bsba_programs
+  - intent: accountancy
+  - action: utter_accountancy
+
+- story: Big Data & Business Analytics path1
+  steps:
+  - intent: big_data_ba
+  - action: utter_big_data_ba
+
+- story: Big Data & Business Analytics path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bsba_programs
+  - action: utter_bsba_programs
+  - intent: big_data_ba
+  - action: utter_big_data_ba
+
+- story: CIS & Analytics Software Development path1
+  steps:
+  - intent: cis_analytics_sd
+  - action: utter_cis_analytics_sd
+
+- story: CIS & Analytics Software Development path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bsba_programs
+  - action: utter_bsba_programs
+  - intent: cis_analytics_sd
+  - action: utter_cis_analytics_sd
+
+- story: economics path1
+  steps:
+  - intent: economics
+  - action: utter_economics
+
+- story: economics path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: undergraduate_courses
+  - action: utter_undergraduate_courses
+  - intent: bsba_programs
+  - action: utter_bsba_programs
+  - intent: economics
+  - action: utter_economics
+
+- story: Cybersecurity and Information Assurance path1 
+  steps:
+  - intent: cyber_sec_ia
+  - action: utter_cyber_sec_ia
+
+- story: Cybersecurity and Information Assurance path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: graduate_courses
+  - action: utter_graduate_courses
+  - intent: ms_programs
+  - action: utter_ms_programs
+  - intent: cyber_sec_ia
+  - action: utter_cyber_sec_ia
+
+- story: computer science path1 
+  steps:
+  - intent: computer_science
+  - action: utter_computer_science
+
+- story: computer science path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: graduate_courses
+  - action: utter_graduate_courses
+  - intent: ms_programs
+  - action: utter_ms_programs
+  - intent: computer_science
+  - action: utter_computer_science
+
+- story: Elementary Mathematics Specialist path1 
+  steps:
+  - intent: elementary_maths
+  - action: utter_elementary_maths
+
+- story: Elementary Mathematics Specialist path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: graduate_courses
+  - action: utter_graduate_courses
+  - intent: mse_programs
+  - action: utter_mse_programs
+  - intent: elementary_maths
+  - action: utter_elementary_maths
+
+- story: Curriculum & Instruction path1 
+  steps:
+  - intent: curri_instrustion
+  - action: utter_curri_instrustion
+
+
+- story: Curriculum & Instruction path2
+  steps:
+  - intent: different_courses
+  - action: utter_different_courses
+  - intent: graduate_courses
+  - action: utter_graduate_courses
+  - intent: mse_programs
+  - action: utter_mse_programs
+  - intent: curri_instrustion
+  - action: utter_curri_instrustion
+
+

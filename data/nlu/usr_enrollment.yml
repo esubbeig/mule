@@ -1,0 +1,79 @@
+version: "3.1"
+
+nlu:
+- intent: name
+  examples: |
+    - my name is [Esub Beig](full_name)
+    - my full name is [Ajay Maguluri](full_name)
+    - people used to call me [Syam Prasad Ravella](full_name)
+    - You can call me [Madhulika Macharla](full_name)
+    - I am [Uday kumar](full_name)
+    - call me [John smith](full_name)
+    - [Harrypotter](full_name)
+    - [lakshmi kavya](full_name) is my full name
+    - This is [Tarun](full_name)
+    - am [Vinod Gopal](full_name)
+    - call me [Rahul](full_name)
+    - my friends call me [shipra mithani](full_name)
+    - this is [Bala Sundar Akhil Yaddanapalli](full_name)
+    - My mom love to call me [chaitanya jonnadula](full_name)
+    - [Shriya](full_name)
+    - you call me [mohan chandra](full_name)
+    - [Koushik Readdy] is my name
+
+- intent: email
+  examples: |
+    - [esub.in.the.usa@gmail.com](email)
+    - my email is [ajay.maguluru11236@gmail.com](email)
+    - you can drop an email on [shyamprasas4342@gmail.com](email)
+    - [exb71730@ucmo.edu](email)
+    - [abcdefdfae@hotmail.com](email)
+    - my personal mail is [kavya.mach12@yahoo.com](email)
+
+- intent: gender
+  examples: |
+    - I am [male](gender)
+    - am [female](gender)
+    - [male](gender)
+    - [female](gender)
+    - am a [lady](gender)
+
+- synonym: male
+  examples: |
+    - male
+    - man
+    - boy
+    - masculine
+    - he
+    - him
+    - guy
+    - gent
+    - gentleman
+    - mr
+
+- synonym: female
+  examples: |
+    - female
+    - lady
+    - woman
+    - girl
+    - gentlewoman
+    - madam
+    - miss
+    - ms
+    - mrs
+    - feminine
+
+- intent: course_intake_value
+  examples: |
+    - i would like to enroll for [Fall](course_intake_value) intake
+    - [Spring](course_intake_value)
+    - [summer](course_intake_value)
+    - [summer](course_intake_value) intake
+    - [spring](course_intake_value) intake
+    - [fall](course_intake_value) intake
+    - i will go with [fall](course_intake_value) intake
+    - i am interested in [summer](course_intake_value)
+    - [Fall](course_intake_value) intake will work for me
+    - I am looking for [spring](course_intake_value) intake
+
